@@ -1,27 +1,34 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Задание 2
+## Задача
+- Создаем приложение, в котором есть шахматная доска с клетками. На доске помещается шахматный конь.
+- Пользователь, используя мышь, может, согласно шахматным правилам, ходить конем, кликая по клеткам.
+- Код задания должен быть покрыт тестами
+## Цель
+- Практика в использовании JSX и создании компонентов.
+- Практика в передаче пропсов и реакции на события
+- Практика композиции приложения из компонентов
+## Какие навыки должен показать студент:
+- Создание компонентов
+- Передача props
+- Обработка событий
+- Использование CSS в компонентах
+- Композиция компонентов для решения задачи
+## Примерная последовательность выполнения
+- В главном компоненте создаем необходимые данные о состоянии игры
+- Создаем компоненты Board, Cell, Knight. Для позиционирования коня на доске его можно помещать внутри клеток или использовать абсолютное позиционирование CSS.
+- (*) Создаем сторис(-ы) для Storybook для наших компонентов
+- Передаем данные в дочерние компоненты
+- Передаем события о кликах на доске в главный компонент
+- Пишем код для перемещения фигуры на другую клетку
+- Добавляем ограничение для "хода конем" согласно шахматным правилам
+- Покрываем компоненты тестами
+- (*) Добавляем e2e тесты
+## Пример
+См:  https://otus-2023-chess-board.web.app
+## Справочные материалы
+- React - компоненты: https://react.dev/learn#components
+- Стили в компонентах: https://react.dev/learn#adding-styles
+- Реакция на события: https://react.dev/learn#responding-to-events
+- Передача пропсов: https://react.dev/learn/passing-props-to-a-component
+- Типизация пропсов: https://dev.to/typescripttv/typing-react-props-in-typescript-5hal
+Список не исчерпывающий, найдете, что-то интересное - делитесь! 🤗
